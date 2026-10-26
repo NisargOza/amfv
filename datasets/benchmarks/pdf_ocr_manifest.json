@@ -1,5 +1,5 @@
 {
-  "methodology": "Two born-digital English WHO excerpts, six pages each. Native PDF text and stock Docling (OCR off) use the text layer; Tesseract receives only 300-DPI page rasters. Anchors were checked against rendered excerpt pages 1-2; checks normalize whitespace and hyphenated line breaks. Anchor presence is a diagnostic, not medical correctness, table alignment, recall, CER or WER. FinePDFs itself is not a backend in this runner.",
+  "methodology": "Two born-digital English WHO excerpts, six pages each. Native PDF text uses the embedded text layer; raster OCR backends receive page images. Fourteen critical passages and 26 HIV date/recommendation/status rows were checked against rendered source pages. Exact passage presence, local word-sequence similarity and same-row table linkage are reported separately. These source-checked diagnostics are not medical correctness, full-document CER/WER, recall or proof of table alignment. FinePDFs itself is not a backend in this runner.",
   "documents": [
     {
       "filename": "who_9789240121805_excerpt.pdf",
@@ -74,6 +74,164 @@
         {
           "name": "date-column footnote",
           "text": "Date the recommendation/good practice statement was formulated"
+        }
+      ],
+      "table_rows": [
+        {
+          "name": "diagnosis support",
+          "date": "2016",
+          "status": "Revalidated",
+          "text": "Following an HIV diagnosis, a package of support interventions should be offered"
+        },
+        {
+          "name": "people-centred practices",
+          "date": "2021",
+          "status": "Revalidated",
+          "text": "Health systems should invest in people-centred practices and communication"
+        },
+        {
+          "name": "ART initiation principles",
+          "date": "2019",
+          "status": "Revalidated",
+          "text": "ART initiation should follow the overarching principles of providing people-centred care"
+        },
+        {
+          "name": "outside-facility initiation",
+          "date": "2021",
+          "status": "Revalidated",
+          "text": "Antiretroviral therapy (ART) initiation may be offered outside the health facility"
+        },
+        {
+          "name": "rapid ART initiation",
+          "date": "2017",
+          "status": "Revalidated",
+          "text": "Rapid ART initiation should be offered to all people living with HIV"
+        },
+        {
+          "name": "same-day ART support",
+          "date": "2021",
+          "status": "Revalidated",
+          "text": "The offer of same-day ART initiation should include approaches to improve uptake"
+        },
+        {
+          "name": "clinical visit interval",
+          "date": "2021",
+          "status": "Revalidated",
+          "text": "People established on ART should be offered clinical visits every 3-6 months"
+        },
+        {
+          "name": "ART refill interval",
+          "date": "2021",
+          "status": "Revalidated",
+          "text": "People established on ART should be offered refills of ART lasting 3-6 months"
+        },
+        {
+          "name": "adherence support",
+          "date": "2025",
+          "status": "Updated",
+          "text": "Adherence support interventions should be provided to people on ART"
+        },
+        {
+          "name": "viral-load adherence",
+          "date": "2021",
+          "status": "Revalidated",
+          "text": "Viral load for treatment monitoring should be complemented with non-judgemental"
+        },
+        {
+          "name": "re-engagement support",
+          "date": "2021",
+          "status": "Revalidated",
+          "text": "HIV programmes should implement interventions to trace people who have disengaged from care"
+        },
+        {
+          "name": "adolescent psychosocial care",
+          "date": "2021",
+          "status": "Revalidated",
+          "text": "Psychosocial interventions should be provided to all adolescents and young adults living with HIV"
+        },
+        {
+          "name": "adolescent-friendly services",
+          "date": "2013",
+          "status": "Revalidated",
+          "text": "Adolescent-friendly services should be implemented in HIV services"
+        },
+        {
+          "name": "disclosure counselling",
+          "date": "2013",
+          "status": "Revalidated",
+          "text": "Adolescents should be counselled about the potential benefits and risks of disclosing their HIV status"
+        },
+        {
+          "name": "clinician ART initiation",
+          "date": "2016",
+          "status": "Revalidated",
+          "text": "Trained non-physician clinicians, midwives and nurses can initiate first-line ART"
+        },
+        {
+          "name": "clinician ART maintenance",
+          "date": "2016",
+          "status": "Revalidated",
+          "text": "Trained non-physician clinicians, midwives and nurses can maintain ART"
+        },
+        {
+          "name": "community ART dispensing",
+          "date": "2016",
+          "status": "Revalidated",
+          "text": "Trained and supervised community health workers can dispense ART"
+        },
+        {
+          "name": "lay-provider ART distribution",
+          "date": "2016",
+          "status": "Revalidated",
+          "text": "Trained and supervised lay health-care providers can distribute ART"
+        },
+        {
+          "name": "testing task sharing",
+          "date": "2021",
+          "status": "Revalidated",
+          "text": "Task sharing of specimen collection and point-of-care testing"
+        },
+        {
+          "name": "decentralized ART care",
+          "date": "2013",
+          "status": "Revalidated",
+          "text": "Decentralization of ART care should be considered as a way to increase access"
+        },
+        {
+          "name": "maternal and child settings",
+          "date": "2013",
+          "status": "Revalidated",
+          "text": "In generalized epidemic settings, ART should be initiated and maintained in pregnant and postpartum women"
+        },
+        {
+          "name": "sexual and reproductive health",
+          "date": "2021",
+          "status": "Revalidated",
+          "text": "Sexual and reproductive health services, including contraception, may be integrated with HIV services"
+        },
+        {
+          "name": "ART in TB treatment settings",
+          "date": "2013",
+          "status": "Revalidated",
+          "text": "ART should be initiated in TB treatment settings"
+        },
+        {
+          "name": "TB treatment in HIV care",
+          "date": "2013",
+          "status": "Revalidated",
+          "text": "TB treatment may be provided for people living with HIV in HIV care settings"
+        },
+        {
+          "name": "integrated diabetes care",
+          "date": "2025",
+          "status": "Updated",
+          "text": "Diabetes and hypertension care should be integrated with HIV services"
+        },
+        {
+          "name": "integrated mental health care",
+          "date": "2025",
+          "status": "New",
+          "text": "Mental health care for depression, anxiety and alcohol use disorders should be integrated with HIV services"
         }
       ]
     }

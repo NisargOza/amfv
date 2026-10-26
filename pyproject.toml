@@ -17,6 +17,13 @@ dev = [
     "ruff>=0.11",
 ]
 ocr = ["pypdfium2>=5.14.0,<6.0.0", "pillow>=11.0.0,<13.0.0"]
+ocr-doctr = ["python-doctr>=1.0.1,<2.0.0"]
+ocr-lighton = [
+    "accelerate>=1.0.0,<2.0.0",
+    "torch>=2.7.0,<3.0.0",
+    "transformers>=5.0.0,<6.0.0",
+]
+ocr-paddle = ["paddleocr>=3.6.0,<4.0.0"]
 
 [tool.uv]
 package = false

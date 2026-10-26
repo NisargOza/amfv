@@ -1,0 +1,1508 @@
+{
+  "created_at": "2026-10-26T01:46:30.804331+00:00",
+  "platform": "macOS-15.2-arm64-arm-64bit-Mach-O",
+  "machine": "arm64",
+  "python": "3.13.2",
+  "methodology": "Two born-digital English WHO excerpts, six pages each. Native PDF text uses the embedded text layer; raster OCR backends receive page images. Fourteen critical passages and 26 HIV date/recommendation/status rows were checked against rendered source pages. Exact passage presence, local word-sequence similarity and same-row table linkage are reported separately. These source-checked diagnostics are not medical correctness, full-document CER/WER, recall or proof of table alignment. FinePDFs itself is not a backend in this runner.",
+  "backends": [
+    "native",
+    "tesseract",
+    "docling",
+    "doctr",
+    "lightonocr-2",
+    "paddleocr-v6",
+    "paddleocr-vl-1.6",
+    "firecrawl-auto",
+    "firecrawl-ocr"
+  ],
+  "raster_dpi": 300,
+  "tesseract_psm": 3,
+  "documents": [
+    "who_9789240121805_excerpt.pdf",
+    "who_9789240124233_excerpt.pdf"
+  ],
+  "results": [
+    {
+      "document": "who_9789240121805_excerpt.pdf",
+      "sha256": "4795bf865b6d84dd4606bd94264962eea06b4a03d08188b39fb445e7006f6a66",
+      "pages": 6,
+      "backend": "native",
+      "version": "5.14.0",
+      "status": "ok",
+      "seconds": 0.014,
+      "scoring_seconds": 0.124,
+      "characters": 17869,
+      "output": "who_9789240121805_excerpt.native.md",
+      "output_sha256": "12993b2746a87cdca86835d240d92eaa569e7bf239b8c755729cad1e8f7d6958",
+      "anchors": [
+        {
+          "name": "recommendation population",
+          "text": "daily in critically-ill adults, adolescents and children",
+          "present": true,
+          "word_similarity_percent": 100.0
+        },
+        {
+          "name": "recommendation certainty",
+          "text": "Conditional recommendation, low certainty of evidence",
+          "present": true,
+          "word_similarity_percent": 100.0
+        },
+        {
+          "name": "neonatal exclusion",
+          "text": "but not neonates",
+          "present": true,
+          "word_similarity_percent": 100.0
+        },
+        {
+          "name": "concentration range",
+          "text": "2% to 4%",
+          "present": true,
+          "word_similarity_percent": 100.0
+        },
+        {
+          "name": "risk estimate",
+          "text": "0.67; 95% confidence interval",
+          "present": true,
+          "word_similarity_percent": 100.0
+        },
+        {
+          "name": "confidence interval",
+          "text": "0.45 to 0.99",
+          "present": true,
+          "word_similarity_percent": 100.0
+        },
+        {
+          "name": "chemical burn rationale",
+          "text": "due to the risk of chemical burns",
+          "present": true,
+          "word_similarity_percent": 100.0
+        }
+      ],
+      "anchors_found": 7,
+      "anchors_total": 7,
+      "metrics": {
+        "critical_facts_found": 7,
+        "critical_facts_total": 7,
+        "critical_facts_percent": 100.0,
+        "critical_passage_word_similarity_percent": 100.0,
+        "critical_passage_reference_words": 33
+      }
+    },
+    {
+      "document": "who_9789240121805_excerpt.pdf",
+      "sha256": "4795bf865b6d84dd4606bd94264962eea06b4a03d08188b39fb445e7006f6a66",
+      "pages": 6,
+      "backend": "tesseract",
+      "version": "tesseract 5.5.3",
+      "status": "ok",
+      "seconds": 10.313,
+      "scoring_seconds": 0.125,
+      "characters": 17147,
+      "output": "who_9789240121805_excerpt.tesseract.md",
+      "output_sha256": "a56df6383602d0ff3450e0017bf2aec55951b4a8f0f4f1b9e27295d6ad992eab",
+      "anchors": [
+        {
+          "name": "recommendation population",
+          "text": "daily in critically-ill adults, adolescents and children",
+          "present": true,
+          "word_similarity_percent": 100.0
+        },
+        {
+          "name": "recommendation certainty",
+          "text": "Conditional recommendation, low certainty of evidence",
+          "present": true,
+          "word_similarity_percent": 100.0
+        },
+        {
+          "name": "neonatal exclusion",
+          "text": "but not neonates",
+          "present": true,
+          "word_similarity_percent": 100.0
+        },
+        {
+          "name": "concentration range",
+          "text": "2% to 4%",
+          "present": true,
+          "word_similarity_percent": 100.0
+        },
+        {
+          "name": "risk estimate",
+          "text": "0.67; 95% confidence interval",
+          "present": true,
+          "word_similarity_percent": 100.0
+        },
+        {
+          "name": "confidence interval",
+          "text": "0.45 to 0.99",
+          "present": true,
+          "word_similarity_percent": 100.0
+        },
+        {
+          "name": "chemical burn rationale",
+          "text": "due to the risk of chemical burns",
+          "present": true,
+          "word_similarity_percent": 100.0
+        }
+      ],
+      "anchors_found": 7,
+      "anchors_total": 7,
+      "metrics": {
+        "critical_facts_found": 7,
+        "critical_facts_total": 7,
+        "critical_facts_percent": 100.0,
+        "critical_passage_word_similarity_percent": 100.0,
+        "critical_passage_reference_words": 33
+      }
+    },
+    {
+      "document": "who_9789240121805_excerpt.pdf",
+      "sha256": "4795bf865b6d84dd4606bd94264962eea06b4a03d08188b39fb445e7006f6a66",
+      "pages": 6,
+      "backend": "docling",
+      "status": "skipped",
+      "reason": "The AMFV Docling exporter requires the WHO scraper PR"
+    },
+    {
+      "document": "who_9789240121805_excerpt.pdf",
+      "sha256": "4795bf865b6d84dd4606bd94264962eea06b4a03d08188b39fb445e7006f6a66",
+      "pages": 6,
+      "backend": "doctr",
+      "version": "1.1.0",
+      "model": "fast_base + crnn_vgg16_bn",
+      "device": "mps",
+      "torch": "2.14.1",
+      "output": "who_9789240121805_excerpt.doctr.md",
+      "raw_output": "who_9789240121805_excerpt.doctr.raw.json",
+      "status": "ok",
+      "seconds": 46.423,
+      "scoring_seconds": 0.137,
+      "characters": 17068,
+      "output_sha256": "e609d26f9a12fde1a031a1b9bef6c394aefa8175ed03fe6c05ada106ae8573cb",
+      "anchors": [
+        {
+          "name": "recommendation population",
+          "text": "daily in critically-ill adults, adolescents and children",
+          "present": true,
+          "word_similarity_percent": 100.0
+        },
+        {
+          "name": "recommendation certainty",
+          "text": "Conditional recommendation, low certainty of evidence",
+          "present": true,
+          "word_similarity_percent": 100.0
+        },
+        {
+          "name": "neonatal exclusion",
+          "text": "but not neonates",
+          "present": true,
+          "word_similarity_percent": 100.0
+        },
+        {
+          "name": "concentration range",
+          "text": "2% to 4%",
+          "present": true,
+          "word_similarity_percent": 100.0
+        },
+        {
+          "name": "risk estimate",
+          "text": "0.67; 95% confidence interval",
+          "present": true,
+          "word_similarity_percent": 100.0
+        },
+        {
+          "name": "confidence interval",
+          "text": "0.45 to 0.99",
+          "present": false,
+          "word_similarity_percent": 80.0
+        },
+        {
+          "name": "chemical burn rationale",
+          "text": "due to the risk of chemical burns",
+          "present": true,
+          "word_similarity_percent": 100.0
+        }
+      ],
+      "anchors_found": 6,
+      "anchors_total": 7,
+      "metrics": {
+        "critical_facts_found": 6,
+        "critical_facts_total": 7,
+        "critical_facts_percent": 85.7,
+        "critical_passage_word_similarity_percent": 98.2,
+        "critical_passage_reference_words": 33
+      }
+    },
+    {
+      "document": "who_9789240121805_excerpt.pdf",
+      "sha256": "4795bf865b6d84dd4606bd94264962eea06b4a03d08188b39fb445e7006f6a66",
+      "pages": 6,
+      "backend": "lightonocr-2",
+      "status": "skipped",
+      "reason": "Full-precision LightOnOCR-2 needs more than the detected 8.0 GiB; an observed first-page attempt exceeded 9 GiB of swap"
+    },
+    {
+      "document": "who_9789240121805_excerpt.pdf",
+      "sha256": "4795bf865b6d84dd4606bd94264962eea06b4a03d08188b39fb445e7006f6a66",
+      "pages": 6,
+      "backend": "paddleocr-v6",
+      "version": "3.7.0",
+      "model": "PP-OCRv6",
+      "device": "cpu",
+      "output": "who_9789240121805_excerpt.paddleocr-v6.md",
+      "raw_output": "who_9789240121805_excerpt.paddleocr-v6.raw.json",
+      "status": "ok",
+      "seconds": 195.119,
+      "scoring_seconds": 0.126,
+      "characters": 16981,
+      "output_sha256": "46ef529b524ca54916438f5fb5a4a0fde071e4ba61310534a2cd78f99579724b",
+      "anchors": [
+        {
+          "name": "recommendation population",
+          "text": "daily in critically-ill adults, adolescents and children",
+          "present": true,
+          "word_similarity_percent": 100.0
+        },
+        {
+          "name": "recommendation certainty",
+          "text": "Conditional recommendation, low certainty of evidence",
+          "present": true,
+          "word_similarity_percent": 100.0
+        },
+        {
+          "name": "neonatal exclusion",
+          "text": "but not neonates",
+          "present": true,
+          "word_similarity_percent": 100.0
+        },
+        {
+          "name": "concentration range",
+          "text": "2% to 4%",
+          "present": true,
+          "word_similarity_percent": 100.0
+        },
+        {
+          "name": "risk estimate",
+          "text": "0.67; 95% confidence interval",
+          "present": true,
+          "word_similarity_percent": 100.0
+        },
+        {
+          "name": "confidence interval",
+          "text": "0.45 to 0.99",
+          "present": true,
+          "word_similarity_percent": 100.0
+        },
+        {
+          "name": "chemical burn rationale",
+          "text": "due to the risk of chemical burns",
+          "present": true,
+          "word_similarity_percent": 100.0
+        }
+      ],
+      "anchors_found": 7,
+      "anchors_total": 7,
+      "metrics": {
+        "critical_facts_found": 7,
+        "critical_facts_total": 7,
+        "critical_facts_percent": 100.0,
+        "critical_passage_word_similarity_percent": 100.0,
+        "critical_passage_reference_words": 33
+      }
+    },
+    {
+      "document": "who_9789240121805_excerpt.pdf",
+      "sha256": "4795bf865b6d84dd4606bd94264962eea06b4a03d08188b39fb445e7006f6a66",
+      "pages": 6,
+      "backend": "paddleocr-vl-1.6",
+      "status": "skipped",
+      "reason": "PaddleOCR-VL was not started on the detected 8.0 GiB host after another 1B-parameter vision-language OCR model exceeded 9 GiB of swap"
+    },
+    {
+      "document": "who_9789240121805_excerpt.pdf",
+      "sha256": "4795bf865b6d84dd4606bd94264962eea06b4a03d08188b39fb445e7006f6a66",
+      "pages": 6,
+      "backend": "firecrawl-auto",
+      "status": "skipped",
+      "reason": "FIRECRAWL_API_KEY is not configured"
+    },
+    {
+      "document": "who_9789240121805_excerpt.pdf",
+      "sha256": "4795bf865b6d84dd4606bd94264962eea06b4a03d08188b39fb445e7006f6a66",
+      "pages": 6,
+      "backend": "firecrawl-ocr",
+      "status": "skipped",
+      "reason": "FIRECRAWL_API_KEY is not configured"
+    },
+    {
+      "document": "who_9789240124233_excerpt.pdf",
+      "sha256": "ab24426012f0add3049b2e298e0ac73e702d7aa903fee5a24341fb3f8289bd0d",
+      "pages": 6,
+      "backend": "native",
+      "version": "5.14.0",
+      "status": "ok",
+      "seconds": 0.032,
+      "scoring_seconds": 0.827,
+      "characters": 14802,
+      "output": "who_9789240124233_excerpt.native.md",
+      "output_sha256": "b4b3e59f37d731a485181d11b9e61e795061b31918b1e97bf2d5fb5415d2cf6c",
+      "anchors": [
+        {
+          "name": "conditional outside-facility initiation",
+          "text": "Antiretroviral therapy (ART) initiation may be offered outside the health facility",
+          "present": true,
+          "word_similarity_percent": 100.0
+        },
+        {
+          "name": "rapid initiation population",
+          "text": "Rapid ART initiation should be offered to all people living with HIV",
+          "present": true,
+          "word_similarity_percent": 100.0
+        },
+        {
+          "name": "adult/child certainty distinction",
+          "text": "high-certainty evidence for adults, low-certainty evidence for children",
+          "present": false,
+          "word_similarity_percent": 93.3
+        },
+        {
+          "name": "clinical visit interval",
+          "text": "clinical visits every 3-6 months",
+          "present": true,
+          "word_similarity_percent": 100.0
+        },
+        {
+          "name": "nonphysician task sharing",
+          "text": "Trained non-physician clinicians, midwives and nurses can initiate first-line ART",
+          "present": true,
+          "word_similarity_percent": 100.0
+        },
+        {
+          "name": "integrated diabetes care",
+          "text": "Diabetes and hypertension care should be integrated with HIV services",
+          "present": true,
+          "word_similarity_percent": 100.0
+        },
+        {
+          "name": "date-column footnote",
+          "text": "Date the recommendation/good practice statement was formulated",
+          "present": true,
+          "word_similarity_percent": 100.0
+        }
+      ],
+      "anchors_found": 6,
+      "anchors_total": 7,
+      "metrics": {
+        "critical_facts_found": 6,
+        "critical_facts_total": 7,
+        "critical_facts_percent": 85.7,
+        "critical_passage_word_similarity_percent": 99.2,
+        "critical_passage_reference_words": 64,
+        "table_rows": [
+          {
+            "name": "diagnosis support",
+            "date": "2016",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "people-centred practices",
+            "date": "2021",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "ART initiation principles",
+            "date": "2019",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "outside-facility initiation",
+            "date": "2021",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "rapid ART initiation",
+            "date": "2017",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "same-day ART support",
+            "date": "2021",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "clinical visit interval",
+            "date": "2021",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "ART refill interval",
+            "date": "2021",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "adherence support",
+            "date": "2025",
+            "status": "Updated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "viral-load adherence",
+            "date": "2021",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "re-engagement support",
+            "date": "2021",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "adolescent psychosocial care",
+            "date": "2021",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "adolescent-friendly services",
+            "date": "2013",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "disclosure counselling",
+            "date": "2013",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "clinician ART initiation",
+            "date": "2016",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "clinician ART maintenance",
+            "date": "2016",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "community ART dispensing",
+            "date": "2016",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "lay-provider ART distribution",
+            "date": "2016",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "testing task sharing",
+            "date": "2021",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "decentralized ART care",
+            "date": "2013",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "maternal and child settings",
+            "date": "2013",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "sexual and reproductive health",
+            "date": "2021",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "ART in TB treatment settings",
+            "date": "2013",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "TB treatment in HIV care",
+            "date": "2013",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "integrated diabetes care",
+            "date": "2025",
+            "status": "Updated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "integrated mental health care",
+            "date": "2025",
+            "status": "New",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          }
+        ],
+        "table_recommendations_found": 26,
+        "table_rows_linked": 0,
+        "table_rows_total": 26,
+        "table_recommendations_percent": 100.0,
+        "table_rows_linked_percent": 0.0
+      }
+    },
+    {
+      "document": "who_9789240124233_excerpt.pdf",
+      "sha256": "ab24426012f0add3049b2e298e0ac73e702d7aa903fee5a24341fb3f8289bd0d",
+      "pages": 6,
+      "backend": "tesseract",
+      "version": "tesseract 5.5.3",
+      "status": "ok",
+      "seconds": 13.562,
+      "scoring_seconds": 0.781,
+      "characters": 14346,
+      "output": "who_9789240124233_excerpt.tesseract.md",
+      "output_sha256": "5a75337243305c7682a743e50bdbc692bdbac5038d132799464a50c171a926fb",
+      "anchors": [
+        {
+          "name": "conditional outside-facility initiation",
+          "text": "Antiretroviral therapy (ART) initiation may be offered outside the health facility",
+          "present": true,
+          "word_similarity_percent": 100.0
+        },
+        {
+          "name": "rapid initiation population",
+          "text": "Rapid ART initiation should be offered to all people living with HIV",
+          "present": true,
+          "word_similarity_percent": 100.0
+        },
+        {
+          "name": "adult/child certainty distinction",
+          "text": "high-certainty evidence for adults, low-certainty evidence for children",
+          "present": true,
+          "word_similarity_percent": 100.0
+        },
+        {
+          "name": "clinical visit interval",
+          "text": "clinical visits every 3-6 months",
+          "present": true,
+          "word_similarity_percent": 100.0
+        },
+        {
+          "name": "nonphysician task sharing",
+          "text": "Trained non-physician clinicians, midwives and nurses can initiate first-line ART",
+          "present": true,
+          "word_similarity_percent": 100.0
+        },
+        {
+          "name": "integrated diabetes care",
+          "text": "Diabetes and hypertension care should be integrated with HIV services",
+          "present": true,
+          "word_similarity_percent": 100.0
+        },
+        {
+          "name": "date-column footnote",
+          "text": "Date the recommendation/good practice statement was formulated",
+          "present": true,
+          "word_similarity_percent": 100.0
+        }
+      ],
+      "anchors_found": 7,
+      "anchors_total": 7,
+      "metrics": {
+        "critical_facts_found": 7,
+        "critical_facts_total": 7,
+        "critical_facts_percent": 100.0,
+        "critical_passage_word_similarity_percent": 100.0,
+        "critical_passage_reference_words": 64,
+        "table_rows": [
+          {
+            "name": "diagnosis support",
+            "date": "2016",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "people-centred practices",
+            "date": "2021",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "ART initiation principles",
+            "date": "2019",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "outside-facility initiation",
+            "date": "2021",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "rapid ART initiation",
+            "date": "2017",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "same-day ART support",
+            "date": "2021",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "clinical visit interval",
+            "date": "2021",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "ART refill interval",
+            "date": "2021",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "adherence support",
+            "date": "2025",
+            "status": "Updated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "viral-load adherence",
+            "date": "2021",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "re-engagement support",
+            "date": "2021",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "adolescent psychosocial care",
+            "date": "2021",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "adolescent-friendly services",
+            "date": "2013",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "disclosure counselling",
+            "date": "2013",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "clinician ART initiation",
+            "date": "2016",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "clinician ART maintenance",
+            "date": "2016",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "community ART dispensing",
+            "date": "2016",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "lay-provider ART distribution",
+            "date": "2016",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "testing task sharing",
+            "date": "2021",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "decentralized ART care",
+            "date": "2013",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "maternal and child settings",
+            "date": "2013",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "sexual and reproductive health",
+            "date": "2021",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "ART in TB treatment settings",
+            "date": "2013",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "TB treatment in HIV care",
+            "date": "2013",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "integrated diabetes care",
+            "date": "2025",
+            "status": "Updated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "integrated mental health care",
+            "date": "2025",
+            "status": "New",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          }
+        ],
+        "table_recommendations_found": 26,
+        "table_rows_linked": 0,
+        "table_rows_total": 26,
+        "table_recommendations_percent": 100.0,
+        "table_rows_linked_percent": 0.0
+      }
+    },
+    {
+      "document": "who_9789240124233_excerpt.pdf",
+      "sha256": "ab24426012f0add3049b2e298e0ac73e702d7aa903fee5a24341fb3f8289bd0d",
+      "pages": 6,
+      "backend": "docling",
+      "status": "skipped",
+      "reason": "The AMFV Docling exporter requires the WHO scraper PR"
+    },
+    {
+      "document": "who_9789240124233_excerpt.pdf",
+      "sha256": "ab24426012f0add3049b2e298e0ac73e702d7aa903fee5a24341fb3f8289bd0d",
+      "pages": 6,
+      "backend": "doctr",
+      "version": "1.1.0",
+      "model": "fast_base + crnn_vgg16_bn",
+      "device": "mps",
+      "torch": "2.14.1",
+      "output": "who_9789240124233_excerpt.doctr.md",
+      "raw_output": "who_9789240124233_excerpt.doctr.raw.json",
+      "status": "ok",
+      "seconds": 7.364,
+      "scoring_seconds": 1.218,
+      "characters": 14608,
+      "output_sha256": "93bae4a6b81dfd6fbde6c265d25ed7fa8ee5a187137dd4a2fda2a978cc90a2c6",
+      "anchors": [
+        {
+          "name": "conditional outside-facility initiation",
+          "text": "Antiretroviral therapy (ART) initiation may be offered outside the health facility",
+          "present": false,
+          "word_similarity_percent": 90.9
+        },
+        {
+          "name": "rapid initiation population",
+          "text": "Rapid ART initiation should be offered to all people living with HIV",
+          "present": true,
+          "word_similarity_percent": 100.0
+        },
+        {
+          "name": "adult/child certainty distinction",
+          "text": "high-certainty evidence for adults, low-certainty evidence for children",
+          "present": true,
+          "word_similarity_percent": 100.0
+        },
+        {
+          "name": "clinical visit interval",
+          "text": "clinical visits every 3-6 months",
+          "present": true,
+          "word_similarity_percent": 100.0
+        },
+        {
+          "name": "nonphysician task sharing",
+          "text": "Trained non-physician clinicians, midwives and nurses can initiate first-line ART",
+          "present": true,
+          "word_similarity_percent": 100.0
+        },
+        {
+          "name": "integrated diabetes care",
+          "text": "Diabetes and hypertension care should be integrated with HIV services",
+          "present": true,
+          "word_similarity_percent": 100.0
+        },
+        {
+          "name": "date-column footnote",
+          "text": "Date the recommendation/good practice statement was formulated",
+          "present": true,
+          "word_similarity_percent": 100.0
+        }
+      ],
+      "anchors_found": 6,
+      "anchors_total": 7,
+      "metrics": {
+        "critical_facts_found": 6,
+        "critical_facts_total": 7,
+        "critical_facts_percent": 85.7,
+        "critical_passage_word_similarity_percent": 98.4,
+        "critical_passage_reference_words": 64,
+        "table_rows": [
+          {
+            "name": "diagnosis support",
+            "date": "2016",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "people-centred practices",
+            "date": "2021",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "ART initiation principles",
+            "date": "2019",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "outside-facility initiation",
+            "date": "2021",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 90.9,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "rapid ART initiation",
+            "date": "2017",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "same-day ART support",
+            "date": "2021",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "clinical visit interval",
+            "date": "2021",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "ART refill interval",
+            "date": "2021",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "adherence support",
+            "date": "2025",
+            "status": "Updated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "viral-load adherence",
+            "date": "2021",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "re-engagement support",
+            "date": "2021",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 96.3,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "adolescent psychosocial care",
+            "date": "2021",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 96.6,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "adolescent-friendly services",
+            "date": "2013",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 87.5,
+            "recommendation_found": false,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "disclosure counselling",
+            "date": "2013",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 96.8,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "clinician ART initiation",
+            "date": "2016",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "clinician ART maintenance",
+            "date": "2016",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "community ART dispensing",
+            "date": "2016",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "lay-provider ART distribution",
+            "date": "2016",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "testing task sharing",
+            "date": "2021",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "decentralized ART care",
+            "date": "2013",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 92.3,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "maternal and child settings",
+            "date": "2013",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 96.8,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "sexual and reproductive health",
+            "date": "2021",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 96.3,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "ART in TB treatment settings",
+            "date": "2013",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 94.1,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "TB treatment in HIV care",
+            "date": "2013",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 96.6,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "integrated diabetes care",
+            "date": "2025",
+            "status": "Updated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "integrated mental health care",
+            "date": "2025",
+            "status": "New",
+            "recommendation_word_similarity_percent": 97.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          }
+        ],
+        "table_recommendations_found": 25,
+        "table_rows_linked": 0,
+        "table_rows_total": 26,
+        "table_recommendations_percent": 96.2,
+        "table_rows_linked_percent": 0.0
+      }
+    },
+    {
+      "document": "who_9789240124233_excerpt.pdf",
+      "sha256": "ab24426012f0add3049b2e298e0ac73e702d7aa903fee5a24341fb3f8289bd0d",
+      "pages": 6,
+      "backend": "lightonocr-2",
+      "status": "skipped",
+      "reason": "Full-precision LightOnOCR-2 needs more than the detected 8.0 GiB; an observed first-page attempt exceeded 9 GiB of swap"
+    },
+    {
+      "document": "who_9789240124233_excerpt.pdf",
+      "sha256": "ab24426012f0add3049b2e298e0ac73e702d7aa903fee5a24341fb3f8289bd0d",
+      "pages": 6,
+      "backend": "paddleocr-v6",
+      "version": "3.7.0",
+      "model": "PP-OCRv6",
+      "device": "cpu",
+      "output": "who_9789240124233_excerpt.paddleocr-v6.md",
+      "raw_output": "who_9789240124233_excerpt.paddleocr-v6.raw.json",
+      "status": "ok",
+      "seconds": 170.208,
+      "scoring_seconds": 1.103,
+      "characters": 14434,
+      "output_sha256": "82c045272047252be345da25c38452385360c44bfa46ca6f6482358801e399a1",
+      "anchors": [
+        {
+          "name": "conditional outside-facility initiation",
+          "text": "Antiretroviral therapy (ART) initiation may be offered outside the health facility",
+          "present": true,
+          "word_similarity_percent": 100.0
+        },
+        {
+          "name": "rapid initiation population",
+          "text": "Rapid ART initiation should be offered to all people living with HIV",
+          "present": true,
+          "word_similarity_percent": 100.0
+        },
+        {
+          "name": "adult/child certainty distinction",
+          "text": "high-certainty evidence for adults, low-certainty evidence for children",
+          "present": true,
+          "word_similarity_percent": 100.0
+        },
+        {
+          "name": "clinical visit interval",
+          "text": "clinical visits every 3-6 months",
+          "present": true,
+          "word_similarity_percent": 100.0
+        },
+        {
+          "name": "nonphysician task sharing",
+          "text": "Trained non-physician clinicians, midwives and nurses can initiate first-line ART",
+          "present": true,
+          "word_similarity_percent": 100.0
+        },
+        {
+          "name": "integrated diabetes care",
+          "text": "Diabetes and hypertension care should be integrated with HIV services",
+          "present": true,
+          "word_similarity_percent": 100.0
+        },
+        {
+          "name": "date-column footnote",
+          "text": "Date the recommendation/good practice statement was formulated",
+          "present": true,
+          "word_similarity_percent": 100.0
+        }
+      ],
+      "anchors_found": 7,
+      "anchors_total": 7,
+      "metrics": {
+        "critical_facts_found": 7,
+        "critical_facts_total": 7,
+        "critical_facts_percent": 100.0,
+        "critical_passage_word_similarity_percent": 100.0,
+        "critical_passage_reference_words": 64,
+        "table_rows": [
+          {
+            "name": "diagnosis support",
+            "date": "2016",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "people-centred practices",
+            "date": "2021",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "ART initiation principles",
+            "date": "2019",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "outside-facility initiation",
+            "date": "2021",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "rapid ART initiation",
+            "date": "2017",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "same-day ART support",
+            "date": "2021",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "clinical visit interval",
+            "date": "2021",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "ART refill interval",
+            "date": "2021",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "adherence support",
+            "date": "2025",
+            "status": "Updated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "viral-load adherence",
+            "date": "2021",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "re-engagement support",
+            "date": "2021",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 96.3,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "adolescent psychosocial care",
+            "date": "2021",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 96.6,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "adolescent-friendly services",
+            "date": "2013",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "disclosure counselling",
+            "date": "2013",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 96.8,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "clinician ART initiation",
+            "date": "2016",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "clinician ART maintenance",
+            "date": "2016",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "community ART dispensing",
+            "date": "2016",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "lay-provider ART distribution",
+            "date": "2016",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "testing task sharing",
+            "date": "2021",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "decentralized ART care",
+            "date": "2013",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "maternal and child settings",
+            "date": "2013",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 96.8,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "sexual and reproductive health",
+            "date": "2021",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 96.3,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "ART in TB treatment settings",
+            "date": "2013",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 94.1,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "TB treatment in HIV care",
+            "date": "2013",
+            "status": "Revalidated",
+            "recommendation_word_similarity_percent": 96.6,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "integrated diabetes care",
+            "date": "2025",
+            "status": "Updated",
+            "recommendation_word_similarity_percent": 100.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          },
+          {
+            "name": "integrated mental health care",
+            "date": "2025",
+            "status": "New",
+            "recommendation_word_similarity_percent": 97.0,
+            "recommendation_found": true,
+            "date_recommendation_status_linked": false
+          }
+        ],
+        "table_recommendations_found": 26,
+        "table_rows_linked": 0,
+        "table_rows_total": 26,
+        "table_recommendations_percent": 100.0,
+        "table_rows_linked_percent": 0.0
+      }
+    },
+    {
+      "document": "who_9789240124233_excerpt.pdf",
+      "sha256": "ab24426012f0add3049b2e298e0ac73e702d7aa903fee5a24341fb3f8289bd0d",
+      "pages": 6,
+      "backend": "paddleocr-vl-1.6",
+      "status": "skipped",
+      "reason": "PaddleOCR-VL was not started on the detected 8.0 GiB host after another 1B-parameter vision-language OCR model exceeded 9 GiB of swap"
+    },
+    {
+      "document": "who_9789240124233_excerpt.pdf",
+      "sha256": "ab24426012f0add3049b2e298e0ac73e702d7aa903fee5a24341fb3f8289bd0d",
+      "pages": 6,
+      "backend": "firecrawl-auto",
+      "status": "skipped",
+      "reason": "FIRECRAWL_API_KEY is not configured"
+    },
+    {
+      "document": "who_9789240124233_excerpt.pdf",
+      "sha256": "ab24426012f0add3049b2e298e0ac73e702d7aa903fee5a24341fb3f8289bd0d",
+      "pages": 6,
+      "backend": "firecrawl-ocr",
+      "status": "skipped",
+      "reason": "FIRECRAWL_API_KEY is not configured"
+    }
+  ]
+}

@@ -10,8 +10,12 @@ from pathlib import Path
 import pytest
 
 _DATASETS = Path(__file__).resolve().parents[1]
+_BENCHMARKS = _DATASETS / "benchmarks"
 _RUNNER = _DATASETS / "benchmarks" / "pdf_ocr.py"
 _PDF_FIXTURES = _DATASETS / "test" / "fixtures" / "pdf"
+sys.path.insert(0, str(_BENCHMARKS))
+from pdf_ocr_metrics import score_output  # noqa: E402
+from pdf_ocr_models import _portable_json  # noqa: E402
 
 
 def test_firecrawl_without_credentials_records_skips(tmp_path: Path) -> None:
@@ -33,7 +37,8 @@ def test_firecrawl_without_credentials_records_skips(tmp_path: Path) -> None:
     assert {entry["backend"] for entry in report["results"]} == {"firecrawl-auto", "firecrawl-ocr"}
     assert all(entry["status"] == "skipped" for entry in report["results"])
     assert all("FIRECRAWL_API_KEY" in entry["reason"] for entry in report["results"])
-    assert not list(tmp_path.glob("*.md"))
+    assert not [path for path in tmp_path.glob("*.md") if path.name != "summary.md"]
+    assert "firecrawl-auto | skipped" in (tmp_path / "summary.md").read_text()
 
 
 def test_native_backend_retains_pdf_provenance_and_raw_text(tmp_path: Path) -> None:
@@ -56,8 +61,13 @@ def test_native_backend_retains_pdf_provenance_and_raw_text(tmp_path: Path) -> N
         markdown = (tmp_path / entry["output"]).read_text()
         assert markdown.strip()
         assert "certainty" in markdown
+        assert entry["output_sha256"] == hashlib.sha256((tmp_path / entry["output"]).read_bytes()).hexdigest()
+        assert entry["metrics"]["critical_passage_word_similarity_percent"] >= 99
     cvc = next(entry for entry in report["results"] if "1805" in entry["document"])
     assert cvc["anchors_found"] == 7
+    hiv = next(entry for entry in report["results"] if "4233" in entry["document"])
+    assert hiv["metrics"]["table_recommendations_found"] == 26
+    assert hiv["metrics"]["table_rows_linked"] == 0
 
 
 def test_invalid_raster_resolution_is_rejected_before_output(tmp_path: Path) -> None:
@@ -74,3 +84,57 @@ def test_invalid_raster_resolution_is_rejected_before_output(tmp_path: Path) -> 
     assert result.returncode == 2
     assert "--dpi must be at least 72" in result.stderr
     assert not output.exists()
+
+
+def test_structured_table_metric_requires_all_fields_in_one_row() -> None:
+    """Recovering words alone does not receive table-linkage credit."""
+    document = {
+        "anchors": [{"name": "care", "text": "care should be integrated"}],
+        "table_rows": [
+            {"name": "integrated care", "date": "2025", "status": "New", "text": "care should be integrated"}
+        ],
+    }
+    unstructured = score_output("2025\ncare should be integrated\nNew", document)
+    structured = score_output("| 2025 | care should be integrated | New |", document)
+
+    assert unstructured["table_recommendations_found"] == 1
+    assert unstructured["table_rows_linked"] == 0
+    assert structured["table_rows_linked"] == 1
+
+
+def test_document_filter_runs_only_requested_fixture(tmp_path: Path) -> None:
+    """A focused model smoke run need not process every committed fixture."""
+    pytest.importorskip("pypdfium2", reason="requires the root ocr dependency group")
+    filename = "who_9789240121805_excerpt.pdf"
+    result = subprocess.run(
+        [
+            sys.executable,
+            str(_RUNNER),
+            "--output-dir",
+            str(tmp_path),
+            "--document",
+            filename,
+            "--backend",
+            "native",
+        ],
+        capture_output=True,
+        text=True,
+        timeout=60,
+        check=False,
+    )
+
+    assert result.returncode == 0, result.stderr
+    report = json.loads((tmp_path / "results.json").read_text())
+    assert report["documents"] == [filename]
+    assert [entry["document"] for entry in report["results"]] == [filename]
+
+
+def test_retained_model_json_does_not_expose_checkout_path(tmp_path: Path) -> None:
+    """Third-party raw output keeps the fixture name but not a contributor's local path."""
+    source = tmp_path / "fixture.pdf"
+    value = {"input_path": str(source), "nested": [str(source), "other"]}
+
+    assert _portable_json(value, source=source) == {
+        "input_path": "fixture.pdf",
+        "nested": ["fixture.pdf", "other"],
+    }
